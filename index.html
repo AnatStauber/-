@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@300&family=Signika+Negative:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" defer src="appAtlas.js"></script>
+    <script type="text/javascript">
+        const maploaded = () => {
+            console.log("aaaa");
+            let map = document.querySelector("#mapFrame_id");
+            let loading = document.querySelector(".loader");
+            loading.classList.add("d-none");
+            map.classList.remove("d-none");
+        }
+        </script>
+    
+    <title>Atlas</title>
+</head>
+<body class="d-flex flex-column justify-content-between" >
+<!-- start header --->
+<!-- <header>
+    <div class="d-flex justify-content-between">
+        <div  class="d-flex justify-content-evenly"> 
+            <p id="id_logo" class="logo text-warning py-1 ms-3 fw-bold"> Atlas</p>
+            <nav id="id_open" class="text-warning d-flex justify-content-between py-3 px-lg-3 px-lg-2">
+                <p id="id_israel">Israel</p> 
+                <p id="id_usa">USA</p> 
+                <p id="id_thailand">Thailand</p> 
+                <p id="id_uk">United Kingdom</p>
+                <p id="id_france">France</p> 
+            </nav>
+          
+        </div>
+        <div class="autocomplete d-flex mt-lg-3 mt-2 mx-2">
+            <input id="src_input" class="justify-content-center h-50 border border-dark rounded" type="text" placeholder="Search..">
+            <button id="src_btn" class="d-flex justify-content-center btn btn-primary h-50" type="submit"><i class="rounded fa fa-search"></i></button>
+        </div>
+    </div>
+</header> -->
+<header>
+    <div class="d-flex">
+        <div class="col-1">
+            <p id="id_logo" class="logo text-warning fw-bold mx-3 my-auto py-md-2 "> Atlas </p>
+        </div>
+        <div id="nav_open" class="col-11 d-lg-flex justify-content-between flex-column flex-lg-row">
+            <div>
+                <nav  class="text-warning d-flex justify-content-between ms-lg-4 ms-xl-2 py-3">
+                    <p id="id_israel">Israel</p> 
+                    <p id="id_usa">USA</p> 
+                    <p id="id_thailand">Thailand</p> 
+                    <p id="id_uk">United Kingdom</p>
+                    <p id="id_france">France</p> 
+                </nav>
+            </div>
+
+           
+
+            <div class="boxes d-flex col-4">
+                <div class="">
+                    <select  id="id_select" class="form-select h-50 mt-2 " aria-label="Default select">
+                        <option selected id="id_selected">Select country</option>
+                        <!-- <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option> -->
+                    </select>
+                </div>
+
+                <div class="autocomplete d-flex mx-2 h-100 w-100 mt-2">
+                    <input id="src_input" class="justify-content-center h-50 border border-dark rounded" type="text" placeholder="Search..">
+                    <button id="src_btn" class="d-flex justify-content-center btn btn-primary h-50" type="submit"><i class="rounded fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="burger col d-lg-none text-end">
+        <i id="burger_btn" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+</header> 
+
+<!-- end header -->
+
+<!-- start main -->
+<main id="id_main">
+    <div id="id_parent" class="container bg-light mt-5 w-50 h-100" >
+    </div>
+
+    <div id="id_preview" class="d-flex justify-content-around flex-wrap" data-aos="fade-up" data-aos-duration="3000">
+
+    </div>
+</main>
+<!-- end main -->
+
+<!-- start footer -->
+<footer>
+<div class="bg-black w-100 mt-5 text-warning text-center">
+     Created by Anat Stauber 2023
+</div>
+</footer>
+<!-- end footer -->
+
+</body>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+
+
+</html>
